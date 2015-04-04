@@ -166,7 +166,7 @@ confirm_mode=0
 ################################################################
 cd "$sourcedir"
 rename "s/ /_/g" *
-for filelist in `find -maxdepth 1 -type f | sed s,^./,,`
+for filelist in `find . -maxdepth 1 -type f | sed s,^./,,`
 do
 
 	if ffmpeg -i $filelist 2>&1 | grep 'Invalid data found'		#check if it's video file
